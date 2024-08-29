@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3099155e-6cc2-426d-b3e6-0db1629643d2">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT NomStg, PrenomStg, Filiere, IdStg, Promotion
+FROM     dbo.Stagaire]]>
+	</queryString>
+	<field name="NomStg" class="java.lang.String"/>
+	<field name="PrenomStg" class="java.lang.String"/>
+	<field name="Filiere" class="java.lang.String"/>
+	<field name="IdStg" class="java.lang.Integer"/>
+	<field name="Promotion" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="108" splitType="Stretch">
+			<staticText>
+				<reportElement x="64" y="48" width="158" height="14" uuid="65bebd8a-acb9-4b17-917d-126fe3b28c45"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Autorise sous 03/03/2/2003 du 02/19/2003
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="22" width="170" height="20" uuid="f978056d-cf1f-4055-80bd-5b44e5abc361"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bd hassan II, lot Essafi, Imm. N1,
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="22" width="100" height="20" uuid="2182c633-1ff2-47db-a926-97abcc01bf49"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Groupe IPIRNET]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="332" y="35" width="56" height="20" uuid="67655d28-a10e-4503-81e2-484618240064"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Berrechid
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="69" width="187" height="14" uuid="06ca34d1-81c2-494a-b959-a5083ca687d1"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Accreditation sous: 18/DFPP/F0301/32 du 07/31/2018
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="446" y="22" width="99" height="20" uuid="32af8699-38f6-4e1d-90a8-ee120ec44c93"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tel: 05 22 32 72 13
+
+
+]]></text>
+			</staticText>
+			<image>
+				<reportElement x="13" y="15" width="52" height="68" uuid="e95a09d3-32f8-432f-815c-8555ce41024c"/>
+				<imageExpression><![CDATA["C:\\Users\\PC\\Desktop\\Ipirnet\\java-ui-dashboard-011-main\\src\\javaswingdev\\img\\logo (1).png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="443" y="60" width="102" height="20" uuid="ed8f5487-e448-4f4d-a56b-5f5ae39d9b9f"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fax: 05 22 32 72 13
+
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="289" y="60" width="142" height="20" uuid="9f2d77fc-3c73-4cd3-8d2d-fa77894c212c"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[E-mail: ipirnet@menara.ma
+
+]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="155" splitType="Stretch">
+			<staticText>
+				<reportElement style="Column header" x="110" y="87" width="111" height="18" forecolor="#000000" uuid="b33c3d72-1513-45f9-b936-97ed07def0c7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nom]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="221" y="87" width="111" height="18" forecolor="#000000" uuid="6dff4fee-fc06-40ae-94b8-1aa1c043a7b2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Prenom]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="332" y="87" width="111" height="18" forecolor="#000000" uuid="30067422-b6b2-45a4-a766-796beae99e6f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Filiere]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="-1" y="87" width="111" height="18" forecolor="#000000" uuid="51d90f0d-228c-4479-a064-31a0a866c222"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[ID Stagiaire]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="443" y="87" width="111" height="18" forecolor="#000000" uuid="9a5290a3-321c-466f-b252-de680aac0c78"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Promotion]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="110" y="105" width="111" height="18" uuid="f5e91120-02b8-4825-b57f-31326c0bc338"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NomStg}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="221" y="105" width="111" height="18" uuid="e7eca92b-b8f8-4d1d-b3cf-bd648bd53e43"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PrenomStg}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="332" y="105" width="111" height="18" uuid="caa91608-c948-4279-868d-fd04b2c1d6dd"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Filiere}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="442" y="105" width="111" height="18" uuid="d5d447da-3efe-4d6f-8d95-a0c776f752be"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Promotion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="-1" y="105" width="111" height="18" uuid="a40e4549-d988-4d4c-b979-a3e323112170"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{IdStg}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="181" y="20" width="227" height="33" uuid="d63f7f41-ea79-4274-8b23-59eb68a1eafe"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[STAGIAIRE Groupe IPIRNET]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="555" height="18" uuid="8fe32e83-1a68-4961-a53f-d42f710e6509"/>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="248a8bd2-b247-4e84-a142-6f5b84b2716a"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
